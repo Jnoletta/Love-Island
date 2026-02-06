@@ -1,0 +1,81 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  height:100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+main {
+  width: 300px;
+  max-width: 90%;
+}
+
+.card {
+    background-color: pink;
+    padding: 50px;
+    font-family: sans-serif;
+}
+
+.profiles {
+  width:100%;
+  position: relative;
+  height:200px;
+}
+
+.profile {
+  position: absolute;
+  left:0px;
+  top:0px;
+  width:100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  cursor:pointer;
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.profile--match {
+    transition: .4s;
+    transform: translateX(1500px) translateY(600px) rotate(90deg);
+}
+
+.profile--next {
+    transition: .4s;
+    transform: translateX(-1500px) translateY(600px) rotate(-90deg);
+
+}
+
+.profile--back {
+    transition : .4s
+}
+
+.profile--matching::after, .profile--nexting::after {
+    content:"Island 🥰";
+    font-weight: bold;
+    font-size: 28px;
+    padding:8px 12px;
+    border: solid 2px rgb(4, 255, 4);
+    color: rgb(255, 255, 255);
+    background : rgb(4, 255, 4);
+    border-radius: 8px;
+    position:absolute;
+    top: 24px;
+    right:12px;
+    transform:rotate(24deg);
+}
+
+.profile--nexting::after {
+    content:"No Island 😭";
+    border: solid 2px red;
+    background : red;
+
+}
